@@ -4,10 +4,10 @@ import clases.table;
 import java.util.List;
 import utilidades.tableManager;
 
-public class  main {
+public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String filePath = "tables.txt"; 
+        String filePath = "tables.txt";
 
         while (true) {
             System.out.println("\nMENÚ:");
@@ -60,4 +60,5 @@ public class  main {
             }
         }
     }
+
 }
