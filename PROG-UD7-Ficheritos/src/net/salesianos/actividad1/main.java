@@ -1,6 +1,6 @@
 package net.salesianos.actividad1;
 
-import java.io.File;
+// Ejercicio 1: Crea un programa que solicite al usuario que introduzca un texto.;
 import java.io.FileWriter;
 import java.util.Scanner;
 
@@ -10,10 +10,10 @@ public class main {
         FileWriter fileWriter = null;
 
         try {
-            fileWriter = new FileWriter("texto.txt", true);
+            fileWriter = new FileWriter("texto.txt");
         } catch (java.io.IOException e) {
             e.printStackTrace();
-            scanner.close();
+        scanner.close();
             return;
         }
 
@@ -27,8 +27,8 @@ public class main {
             text = scanner.nextLine();
 
         }
+
         String formattedText = text.toUpperCase().replaceAll(" ", "_");
-        System.out.println("Tu texto es: " + formattedText);
 
         try {
             fileWriter.write(formattedText);
