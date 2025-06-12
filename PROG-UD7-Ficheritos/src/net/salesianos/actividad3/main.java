@@ -4,13 +4,14 @@ import java.io.File;
 
 public class main {
     static File file = new File("FicheritoCreadoCodigo.txt");
+
     public static void main(String[] args) {
-        
+
         System.out.println("Archivo creado: " + file.getName());
         try {
             file.createNewFile();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al crear el archivo: ");
         }
     }
 }

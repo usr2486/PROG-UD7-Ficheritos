@@ -1,7 +1,7 @@
 package net.salesianos.actividad4;
 
-import net.salesianos.actividad4.clases.mesa;
+import net.salesianos.actividad4.clases.table;
 
 public class main {
-    mesa m = new mesa("rojo", 4);
+    table m = new table("rojo", 4);
 }   

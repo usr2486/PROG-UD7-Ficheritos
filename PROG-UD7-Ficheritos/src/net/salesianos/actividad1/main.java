@@ -12,8 +12,8 @@ public class main {
         try {
             fileWriter = new FileWriter("texto.txt");
         } catch (java.io.IOException e) {
-            e.printStackTrace();
-        scanner.close();
+            System.out.println("Error al crear el archivo: ");
+            scanner.close();
             return;
         }
 
@@ -33,7 +33,8 @@ public class main {
         try {
             fileWriter.write(formattedText);
         } catch (java.io.IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al escribir en el archivo: ");
+            ;
         }
 
         scanner.close();
@@ -42,8 +43,9 @@ public class main {
             try {
                 fileWriter.close();
             } catch (java.io.IOException e) {
-                e.printStackTrace();
+                System.out.println("Error al cerrar el archivo: ");
             }
+
         }
     }
 }

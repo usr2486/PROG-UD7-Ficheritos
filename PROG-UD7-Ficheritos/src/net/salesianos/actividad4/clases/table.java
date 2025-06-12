@@ -1,6 +1,6 @@
 package net.salesianos.actividad4.clases;
 
-public class mesa {
+public class table {
     private String color;
     private int legNumber;
 
@@ -20,7 +20,7 @@ public class mesa {
         this.legNumber = legNumber;
     }
 
-    public mesa(String color, int legNumber) {
+    public table(String color, int legNumber) {
         this.color = color;
         this.legNumber = legNumber;
     }
