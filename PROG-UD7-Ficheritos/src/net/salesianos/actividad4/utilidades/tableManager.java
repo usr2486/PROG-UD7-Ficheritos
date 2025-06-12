@@ -1,4 +1,5 @@
-import net.salesianos.actividad4.clases.table;
+package utilidades;
+import clases.table;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -8,36 +9,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class tableManager {
-    
-    public static void saveTableToFile(table table, String filePath) {
+    public static void saveTableToFile(table t, String filePath) {
         try (FileWriter writer = new FileWriter(filePath, true)) {
-            
-            writer.write(table.getColor() + ";" + table.getLegNumber() + System.lineSeparator());
+            writer.write(t.getColor() + ";" + t.getLegNumber() + System.lineSeparator());
             System.out.println("Mesa guardada en fichero correctamente.");
         } catch (IOException e) {
-            System.out.println("Error al guardar la mesa en el fichero:");
-            ;
+            System.out.println("Error al guardar la mesa en el fichero: " + e.getMessage());
         }
     }
 
-    
     public static List<table> getAllTablesFromFile(String filePath) {
         List<table> tables = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
-            while ((line = reader.readLine()) != null) {
-                
+            while ((line= reader.readLine()) != null) {
                 String[] parts = line.split(";");
                 if (parts.length == 2) {
                     String color = parts[0];
-                    int numberOfLegs = Integer.parseInt(parts[1]);
-                    tables.add(new table(color, numberOfLegs));
+                    int legNumber = Integer.parseInt(parts[1]);
+                    tables.add(new table(color, legNumber));
                 }
             }
             System.out.println("Mesas leídas del fichero correctamente.");
         } catch (IOException e) {
-            System.out.println("Error al leer las mesas del fichero:");
-            e.printStackTrace();
+            System.out.println("Error al leer las mesas del fichero: " + e.getMessage());
         }
         return tables;
     }

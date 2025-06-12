@@ -1,4 +1,4 @@
-package net.salesianos.actividad4.clases;
+package clases;
 
 public class table {
     private String color;
