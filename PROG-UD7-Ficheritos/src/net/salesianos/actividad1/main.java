@@ -10,9 +10,9 @@ public class main {
         String text = scanner.nextLine();
 
         while (text.length() < 30) {
-            text = scanner.nextLine();
-            System.out.println("Eso es muy corto colega explayate mas");
 
+            System.out.println("Eso es muy corto colega explayate mas");
+            text = scanner.nextLine();
         }
         scanner.close();
     }
