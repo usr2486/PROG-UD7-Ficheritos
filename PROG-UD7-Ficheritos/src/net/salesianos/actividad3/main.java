@@ -5,8 +5,6 @@ import java.io.File;
 
 public class main {
 
-    static File file = new File("FicheritoCreadoCodigo.txt");
-
     static File file = new File("C:/Users/Usuario/Documents/GitHub/PROG-UD7-Ficheritos/PROG-UD7-Ficheritos/src/net/salesianos/actividad3/FicheritoCreadoCodigo.txt");
 
 
